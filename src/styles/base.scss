@@ -1,0 +1,6 @@
+@mixin flex($dir, $jc-pos, $ai-pos) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jc-pos;
+    align-items: $jc-pos;
+}
