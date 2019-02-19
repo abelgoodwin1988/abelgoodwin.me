@@ -1,5 +1,5 @@
 <template>
     <div>
-        THIS IS PORTFOLIO
+        THIS IS CONTACT
     </div>
 </template>

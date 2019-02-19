@@ -1,20 +1,38 @@
 <template>
     <div id="navigation">
-        <div class="navigation-item">
-            Home
-        </div>
-        <div class="navigation-item">
-            Resume
-        </div>
-        <div class="navigation-item">
-            Portfolio
-        </div>
-        <div class="navigation-item">
-            Blog
-        </div>
-        <div class="navigation-item">
-            Contact
-        </div>
+        <router-link tag="div" :to="{name: 'home'}" class="navigation-item navigation-item-image">
+            <img :src="logo" alt="Simplify Logo">
+            <div class="navigation-item-selector"
+            :class="{'navigation-item-selected': currentRouteName === 'home'}"></div>
+        </router-link>
+        <router-link tag="div" :to="{ name: 'resume' }" class="navigation-item">
+            <div class="navigation-item-label">
+                Resume
+            </div>
+            <div class="navigation-item-selector"
+                :class="{'navigation-item-selected': currentRouteName === 'resume'}"></div>
+        </router-link>
+        <router-link tag="div" :to="{ name: 'portfolio' }" class="navigation-item">
+            <div class="navigation-item-label">
+                Portfolio
+            </div>
+            <div class="navigation-item-selector"
+                :class="{'navigation-item-selected': currentRouteName === 'portfolio'}"></div>
+        </router-link>
+        <router-link tag="div" :to="{ name: 'blog' }" class="navigation-item">
+            <div class="navigation-item-label">
+                Blog
+            </div>
+            <div class="navigation-item-selector"
+                :class="{'navigation-item-selected': currentRouteName === 'blog'}"></div>
+        </router-link>
+        <router-link tag="div" :to="{ name: 'contact' }" class="navigation-item">
+            <div class="navigation-item-label">
+                Contact
+            </div>
+            <div class="navigation-item-selector"
+                :class="{'navigation-item-selected': currentRouteName === 'contact'}"></div>
+        </router-link>
     </div>
 </template>
 
@@ -25,8 +43,13 @@ export default Vue.extend({
         logo: string;
     } {
         return {
-            logo: '@/assets/logo.gif',
+            logo: require('@/assets/logo.gif'),
         };
+    },
+    computed: {
+        currentRouteName(): string | undefined {
+            return this.$route.name;
+        },
     },
 });
 
@@ -41,11 +64,42 @@ export default Vue.extend({
         right: 0;
         width: 100%;
         height: 12vmin;
-        background: rgba(0,0,0,.8);
+        padding: 0 3vmin;
+        background: linear-gradient(to right,rgba(0,0,0,.9), rgba(13, 13, 13, .90));
+        box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,1);
 
         .navigation-item {
+            @include flex(column, flex-end, center);
             height: 100%;
             width: 20vmin;
+            color: $font-color-secondary;
+            text-align: center;
+
+            
+
+            .navigation-item-label {
+                @include flex(row, center, center);
+                height: 4vmin;
+                margin: 0 0 1vmin 0;
+            }
+            .navigation-item-selector{
+                @include flex(row, center, flex-end);
+                height: .7vmin;
+                width: 100%;
+            }
+            .navigation-item-selected {
+                background: $color-secondary;
+            }
+        }
+        .navigation-item:hover {
+            cursor: pointer;
+        }
+        .navigation-item-image {
+            max-width: 10vmin;
+            align-self: center;
+            img {
+                max-height: 8vmin;
+            }
         }
     }
 </style>
