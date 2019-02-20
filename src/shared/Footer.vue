@@ -52,10 +52,10 @@ export default Vue.extend({
 
                 a {
                     text-decoration: none;
-                    color: $font-color-secondary;
+                    color: $color-primary;
                 }
                 a:hover {
-                    color: $color-tertiary;
+                    color: $color-secondary;
                 }
             }
         }
