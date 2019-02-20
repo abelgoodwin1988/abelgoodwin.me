@@ -35,11 +35,13 @@ export default Vue.extend({
     flex: 1 0 auto;
     min-height: 93vmin;
     width: 100%;
+    background: $background;
     #app-content {
       @include flex(column, flex-start, flex-start);
       flex: 1 0 auto;
       height: 100%;
       min-height: 100%;
+      
       width: 90%;
     }
   }
