@@ -6,10 +6,10 @@ export interface Resume {
     education: Education[];
     skills: Skill[];
     courses: Course[];
-    certificates: Certficate[];
+    certificates: Certificate[];
 }
 
-interface Experience {
+export interface Experience {
     company: string;
     position: string;
     startDate: moment.Moment;
@@ -26,8 +26,9 @@ interface Location {
 
 type Accomplishment = string;
 
-interface Education {
+export interface Education {
     university: string;
+    degree: string;
     startDate: moment.Moment;
     endDate: moment.Moment;
     location: Location;
@@ -49,7 +50,8 @@ interface Course {
     url: string;
 }
 
-interface Certficate {
+interface Certificate {
     name: string;
     url: string;
+    faIcon?: string;
 }

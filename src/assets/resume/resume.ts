@@ -62,6 +62,7 @@ Interested in further developing technical skills in Data Engineering Domains in
     education: [
         {
             university: 'University of Idaho',
+            degree: 'Masters of Accountancy',
             startDate: moment('2015-01-01', 'YYYY-MM-DD'),
             endDate: moment('2015-12-21', 'YYYY-MM-DD'),
             location: {
@@ -73,6 +74,7 @@ Interested in further developing technical skills in Data Engineering Domains in
         },
         {
             university: 'Brigham Young Univiersity - Idaho',
+            degree: 'Bachelors of Science of Accounting',
             startDate: moment('2012-01-01', 'YYYY-MM-DD'),
             endDate: moment('2014-12-21', 'YYYY-MM-DD'),
             location: {
@@ -94,7 +96,6 @@ Interested in further developing technical skills in Data Engineering Domains in
         { name: 'Project Management', description: '', category: ['Business', 'Accounting'] },
         { name: 'Expectation Management', description: '', category: ['Business', 'Accounting'] },
         { name: 'Margin Modeling', description: '', category: ['Business', 'Accounting'] },
-        { name: 'Expectation Management', description: '', category: ['Business', 'Accounting'] },
         { name: 'Leadership', description: '', category: ['Business', 'Accounting'] },
         { name: 'Asset Capitalization', description: '', category: ['Business', 'Accounting'] },
         { name: 'Depreciation', description: '', category: ['Business', 'Accounting'] },
@@ -277,6 +278,7 @@ Interested in further developing technical skills in Data Engineering Domains in
         {
             name: 'AWS Certified Developer Associate',
             url: 'https://www.certmetrics.com/amazon/public/badge.aspx?i=2&t=c&d=2018-01-29&ci=AWS00396977',
+            faIcon: 'aws',
         },
     ],
 };

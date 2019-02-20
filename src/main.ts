@@ -10,6 +10,8 @@ import {
   faTwitter,
   faGithubAlt,
   faTwitch,
+  faSlack,
+  faAws,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
@@ -26,6 +28,8 @@ library.add(
   faTwitter,
   faGithubAlt,
   faTwitch,
+  faSlack,
+  faAws,
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
