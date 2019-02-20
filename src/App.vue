@@ -27,6 +27,7 @@ export default Vue.extend({
 
 <style lang="scss">
   @import '@/styles/base.scss';
+  @import url('assets/fonts/lato.css');
 
   #app {
     @include flex(column, flex-start, center);
