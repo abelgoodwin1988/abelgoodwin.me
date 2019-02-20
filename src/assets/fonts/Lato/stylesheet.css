@@ -36,13 +36,6 @@
   font-weight: 400;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Lato';
-  src: url('Lato-Regularitalic.ttf');
-  src: url('Lato-Regularitalic.ttf?#iefix') format('truetype');
-  font-weight: 400;
-  font-style: italic;
-}
 
 @font-face {
   font-family: 'Lato';
