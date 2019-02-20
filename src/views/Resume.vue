@@ -17,7 +17,8 @@ export default Vue.extend({
             resume: Resume,
         };
     },
-})
+});
+
 </script>
 
 <style lang="scss" scoped>

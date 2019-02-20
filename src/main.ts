@@ -3,9 +3,27 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faGithubAlt,
+  faTwitter,
+  faTwitch,
+  faLinkedinIn,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
 import 'jquery/dist/jquery.min.js';
 import 'bootstrap/scss/bootstrap.scss';
 import 'bootstrap/dist/js/bootstrap.min.js';
+
+library.add(
+  faGithubAlt,
+  faTwitter,
+  faTwitch,
+  faLinkedinIn,
+);
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false;
 

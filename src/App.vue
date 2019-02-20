@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <Nav />
-    <router-view />
+    <div id="app-content">
+      <router-view />
+    </div>
+    <Footer />
   </div>
 </template>
 
@@ -9,11 +12,13 @@
 import Vue from 'vue';
 import Home from './views/Home.vue';
 import Nav from './shared/Navigation.vue';
+import Footer from './shared/Footer.vue';
 
 export default Vue.extend({
   components: {
     Home,
     Nav,
+    Footer
   },
 });
 
@@ -24,8 +29,16 @@ export default Vue.extend({
   @import '@/styles/base.scss';
 
   #app {
-    @include flex(column, flex-start, flex-start);
-    flex: 1 1 auto;
+    @include flex(column, flex-start, center);
+    flex: 1 0 auto;
     min-height: 93vmin;
+    width: 100%;
+    #app-content {
+      @include flex(column, flex-start, flex-start);
+      flex: 1 0 auto;
+      height: 100%;
+      min-height: 100%;
+      width: 90%;
+    }
   }
 </style>
