@@ -35,7 +35,7 @@ export interface Education {
     description: string;
 }
 
-interface Skill {
+export interface Skill {
     name: string;
     description: string;
     category: SkillCategory[];
@@ -50,7 +50,7 @@ interface Course {
     url: string;
 }
 
-interface Certificate {
+export interface Certificate {
     name: string;
     url: string;
     faIcon?: string;
