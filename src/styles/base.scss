@@ -10,3 +10,15 @@ $color-secondary: #FFF;
     justify-content: $jc-pos;
     align-items: $ai-pos;
 }
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    padding: 7vmin 0 0 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}

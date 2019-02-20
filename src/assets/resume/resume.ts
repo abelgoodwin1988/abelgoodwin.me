@@ -1,15 +1,15 @@
-import { Resume } from './resume.model';
+import * as rType from './resume.model';
 // tslint:disable-next-line
 const moment = require('moment');
 /* tslint:disable: max-line-length */
-export const resume: Resume = {
+export const Resume: rType.Resume = {
     summary: `Accomplished data engineer, primarily focused in database development, programming middleware, designing, developing, deploying and maintaining solutions on cloud platforms. Implement custom ETL and platform ETL solutions and cloud migration solutions.
 Technical knowledge in developing and maintaining applications on AWS.
 Interested in further developing technical skills in Data Engineering Domains including analytics as well as Full Stack Development.`,
     experience: [
         {
-            company: "Devetry",
-            position: "Software Engineer",
+            company: 'Devetry',
+            position: 'Software Engineer',
             startDate: moment('2018-09-1', 'YYYY-MM-DD'),
             endDate: 'Current',
             location: {
@@ -20,7 +20,7 @@ Interested in further developing technical skills in Data Engineering Domains in
             accomplishments: [
                 'Built Flight-Booking application for large company retreat and events planning agency.',
                 'Built IoT meter electricity usage dashboard for Government Agency.',
-                'Technologies: Vue, Angular6, Web Sockets, JavaScript, TypeScript, Data Models'
+                'Technologies: Vue, Angular6, Web Sockets, JavaScript, TypeScript, Data Models',
             ],
         },
         {
@@ -136,13 +136,13 @@ Interested in further developing technical skills in Data Engineering Domains in
         { name: 'Linux', description: '', category: ['Software Engineering'] },
         { name: 'Max OSX', description: '', category: ['Software Engineering'] },
         { name: 'Test Driven Development', description: '', category: ['Software Engineering'] },
-        { name: 'AWS', description: '', category: ['Cloud','AWS'] },
-        { name: 'AWS Core Services', description: '', category: ['Cloud','AWS'] },
-        { name: 'RDS', description: '', category: ['Cloud','AWS'] },
-        { name: 'CloudFormation', description: '', category: ['Cloud','AWS'] },
-        { name: 'Database Migration Services', description: '', category: ['Cloud','AWS'] },
-        { name: 'Quicksight', description: '', category: ['Cloud','AWS'] },
-        { name: 'Cloud SQL', description: '', category: ['Cloud','GCP'] },
+        { name: 'AWS', description: '', category: ['Cloud', 'AWS'] },
+        { name: 'AWS Core Services', description: '', category: ['Cloud', 'AWS'] },
+        { name: 'RDS', description: '', category: ['Cloud', 'AWS'] },
+        { name: 'CloudFormation', description: '', category: ['Cloud', 'AWS'] },
+        { name: 'Database Migration Services', description: '', category: ['Cloud', 'AWS'] },
+        { name: 'Quicksight', description: '', category: ['Cloud', 'AWS'] },
+        { name: 'Cloud SQL', description: '', category: ['Cloud', 'GCP'] },
 
     ],
     courses: [

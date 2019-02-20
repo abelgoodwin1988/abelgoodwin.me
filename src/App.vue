@@ -24,6 +24,8 @@ export default Vue.extend({
   @import '@/styles/base.scss';
 
   #app {
-    margin: 12vmin 0 0 0 ;
+    @include flex(column, flex-start, flex-start);
+    flex: 1 1 auto;
+    min-height: 93vmin;
   }
 </style>

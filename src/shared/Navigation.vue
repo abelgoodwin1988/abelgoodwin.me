@@ -1,7 +1,7 @@
 <template>
     <div id="navigation">
         <router-link tag="div" :to="{name: 'home'}" class="navigation-item navigation-item-image">
-            <img :src="logo" alt="Simplify Logo">
+            <img :src="logo" alt="S">
             <div class="navigation-item-selector"
             :class="{'navigation-item-selected': currentRouteName === 'home'}"></div>
         </router-link>
@@ -63,7 +63,7 @@ export default Vue.extend({
         left: 0;
         right: 0;
         width: 100%;
-        height: 12vmin;
+        height: 7vmin;
         padding: 0 3vmin;
         background: linear-gradient(to right,rgba(0,0,0,.9), rgba(13, 13, 13, .90));
         box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,1);
@@ -71,7 +71,7 @@ export default Vue.extend({
         .navigation-item {
             @include flex(column, flex-end, center);
             height: 100%;
-            width: 20vmin;
+            width: 15vmin;
             color: $font-color-secondary;
             text-align: center;
 
@@ -81,6 +81,7 @@ export default Vue.extend({
                 @include flex(row, center, center);
                 height: 4vmin;
                 margin: 0 0 1vmin 0;
+                font-size: 2.5vmin;
             }
             .navigation-item-selector{
                 @include flex(row, center, flex-end);
@@ -95,11 +96,16 @@ export default Vue.extend({
             cursor: pointer;
         }
         .navigation-item-image {
-            max-width: 10vmin;
-            align-self: center;
+            @include flex(column, flex-end, center);
+            max-width: 12vmin;
+
             img {
-                max-height: 8vmin;
+                margin: auto;
+                max-height: 5.6vmin;
             }
+        }
+        .navigation-item-image:hover {
+            cursor: pointer;
         }
     }
 </style>
