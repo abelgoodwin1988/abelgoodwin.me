@@ -18,7 +18,7 @@ export default Vue.extend({
   components: {
     Home,
     Nav,
-    Footer
+    Footer,
   },
 });
 

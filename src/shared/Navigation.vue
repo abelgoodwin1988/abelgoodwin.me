@@ -6,28 +6,32 @@
             :class="{'navigation-item-selected': currentRouteName === 'home'}"></div>
         </router-link>
         <router-link tag="div" :to="{ name: 'resume' }" class="navigation-item">
-            <div class="navigation-item-label">
+            <div class="navigation-item-label"
+                :class="{'selected': currentRouteName ==='resume'}">
                 Resume
             </div>
             <div class="navigation-item-selector"
                 :class="{'navigation-item-selected': currentRouteName === 'resume'}"></div>
         </router-link>
         <router-link tag="div" :to="{ name: 'portfolio' }" class="navigation-item">
-            <div class="navigation-item-label">
+            <div class="navigation-item-label"
+                :class="{'selected': currentRouteName ==='portfolio'}">
                 Portfolio
             </div>
             <div class="navigation-item-selector"
                 :class="{'navigation-item-selected': currentRouteName === 'portfolio'}"></div>
         </router-link>
         <router-link tag="div" :to="{ name: 'blog' }" class="navigation-item">
-            <div class="navigation-item-label">
+            <div class="navigation-item-label"
+                :class="{'selected': currentRouteName ==='blog'}">
                 Blog
             </div>
             <div class="navigation-item-selector"
                 :class="{'navigation-item-selected': currentRouteName === 'blog'}"></div>
         </router-link>
         <router-link tag="div" :to="{ name: 'contact' }" class="navigation-item">
-            <div class="navigation-item-label">
+            <div class="navigation-item-label"
+                :class="{'selected': currentRouteName ==='contact'}">
                 Contact
             </div>
             <div class="navigation-item-selector"
@@ -65,23 +69,25 @@ export default Vue.extend({
         width: 100%;
         height: 7vmin;
         padding: 0 3vmin;
-        background: linear-gradient(to right,rgba(0,0,0,.9), rgba(13, 13, 13, .90));
-        box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,1);
+        background: linear-gradient(to right,rgba(36,41,46,.9), rgba(58, 67, 75, .90));
+        box-shadow: inset 0px -1px 0px 0px rgba(36,41,46,1);
 
         .navigation-item {
             @include flex(column, flex-end, center);
             height: 100%;
             width: 15vmin;
-            color: $font-color-secondary;
+            color: $font-color-tertiary;
             text-align: center;
-
-            
 
             .navigation-item-label {
                 @include flex(row, center, center);
                 height: 4vmin;
                 margin: 0 0 1vmin 0;
                 font-size: 2.5vmin;
+                font-weight: bold;
+            }
+            .selected {
+                color: $font-color-secondary;
             }
             .navigation-item-selector{
                 @include flex(row, center, flex-end);

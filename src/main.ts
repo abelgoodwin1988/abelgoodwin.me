@@ -4,12 +4,13 @@ import router from './router';
 import store from './store';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
+import { faHamburger } from '@fortawesome/free-solid-svg-icons';
 import {
-  faGithubAlt,
-  faTwitter,
-  faTwitch,
   faLinkedinIn,
-} from '@fortawesome/free-solid-svg-icons';
+  faTwitter,
+  faGithubAlt,
+  faTwitch,
+} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 import 'jquery/dist/jquery.min.js';
@@ -17,13 +18,17 @@ import 'bootstrap/scss/bootstrap.scss';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
 library.add(
-  faGithubAlt,
-  faTwitter,
-  faTwitch,
-  faLinkedinIn,
+  faHamburger,
 );
 
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+library.add(
+  faLinkedinIn,
+  faTwitter,
+  faGithubAlt,
+  faTwitch,
+);
+
+Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.config.productionTip = false;
 
