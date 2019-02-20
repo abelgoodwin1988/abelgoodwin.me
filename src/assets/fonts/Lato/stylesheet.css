@@ -7,10 +7,10 @@
 }
 @font-face {
   font-family: 'Lato';
-  src: url('Lato-Blackitalic.ttf');
-  src: url('Lato-Blackitalic.ttf?#iefix') format('truetype');
+  src: url('Lato-BlackItalic.ttf');
+  src: url('Lato-BlackItalic.ttf?#iefix') format('truetype');
   font-weight: 900;
-  font-style: italic;
+  font-style: Italic;
 }
 
 @font-face {
@@ -22,10 +22,10 @@
 }
 @font-face {
   font-family: 'Lato';
-  src: url('Lato-Bolditalic.ttf');
-  src: url('Lato-Bolditalic.ttf?#iefix') format('truetype');
+  src: url('Lato-BoldItalic.ttf');
+  src: url('Lato-BoldItalic.ttf?#iefix') format('truetype');
   font-weight: 700;
-  font-style: italic;
+  font-style: Italic;
 }
 
 
@@ -35,6 +35,13 @@
   src: url('Lato-Regular.ttf?#iefix') format('truetype');
   font-weight: 400;
   font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('Lato-Italic.ttf');
+  src: url('Lato-Italic.ttf?#iefix') format('truetype');
+  font-weight: 400;
+  font-style: Italic;
 }
 
 @font-face {
@@ -46,10 +53,10 @@
 }
 @font-face {
   font-family: 'Lato';
-  src: url('Lato-Lightitalic.ttf');
-  src: url('Lato-Lightitalic.ttf?#iefix') format('truetype');
+  src: url('Lato-LightItalic.ttf');
+  src: url('Lato-LightItalic.ttf?#iefix') format('truetype');
   font-weight: 300;
-  font-style: italic;
+  font-style: Italic;
 }
 
 @font-face {
@@ -61,8 +68,8 @@
 }
 @font-face {
   font-family: 'Lato';
-  src: url('Lato-Hairlineitalic.ttf');
-  src: url('Lato-Hairlineitalic.ttf?#iefix') format('truetype');
+  src: url('Lato-HairlineItalic.ttf');
+  src: url('Lato-HairlineItalic.ttf?#iefix') format('truetype');
   font-weight: 100;
-  font-style: italic;
+  font-style: Italic;
 }

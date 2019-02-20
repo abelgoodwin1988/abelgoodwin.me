@@ -27,9 +27,10 @@ export default Vue.extend({
 
 <style lang="scss">
   @import '@/styles/base.scss';
-  @import 'assets/fonts/lato.css';
+  @import 'assets/fonts/Lato/stylesheet.css';
 
   #app {
+    font-family: Lato;
     @include flex(column, flex-start, center);
     flex: 1 0 auto;
     min-height: 93vmin;
