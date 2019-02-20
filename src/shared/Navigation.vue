@@ -69,7 +69,7 @@ export default Vue.extend({
         width: 100%;
         height: 7vmin;
         padding: 0 3vmin;
-        background: linear-gradient(to right,rgba(36,41,46,.9), rgba(58, 67, 75, .90));
+        background: $banner-fade;
         box-shadow: inset 0px -1px 0px 0px rgba(36,41,46,1);
 
         .navigation-item {

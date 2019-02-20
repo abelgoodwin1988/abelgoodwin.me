@@ -8,6 +8,8 @@ $color-primary: #24292e;
 $color-secondary: #f5f5f5;
 $color-tertiary: #3a434b;
 
+$banner-fade: linear-gradient(to right,rgba(36,41,46,1), rgba(58, 67, 75, .90));
+
 @mixin flex($dir, $jc-pos, $ai-pos) {
     display: flex;
     flex-direction: $dir;
