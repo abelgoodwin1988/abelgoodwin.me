@@ -8,6 +8,7 @@ import {
   faDatabase,
   faFileExcel,
   faAngleDoubleRight,
+  faAt,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faLinkedinIn,
@@ -31,6 +32,7 @@ library.add(
   faDatabase,
   faFileExcel,
   faAngleDoubleRight,
+  faAt,
 );
 
 library.add(
