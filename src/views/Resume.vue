@@ -1,19 +1,23 @@
 <template>
     <div id="resume">
-        <div id="summary">
+        <div id="summary" class="section">
             {{resume.summary}}
         </div>
         <template v-if="resume.hasOwnProperty('experience') && resume.experience.length > 0">
-            <Experience :experiences="resume.experience"/>
+            <Experience :experiences="resume.experience"
+                class="section"/>
         </template>
         <template v-if="resume.hasOwnProperty('education') && resume.education.length > 0">
-            <Education :educations="resume.education" />
+            <Education :educations="resume.education"
+                class="section"/>
         </template>
         <template v-if="resume.hasOwnProperty('certificates') && resume.certificates.length > 0">
-            <Certificates :certificates="resume.certificates" />
+            <Certificates :certificates="resume.certificates"
+                class="section"/>
         </template>
         <template v-if="resume.hasOwnProperty('skills') && resume.skills.length > 0">
-            <Skills :skills="resume.skills" />
+            <Skills :skills="resume.skills"
+                class="section"/>
         </template>
     </div>
 </template>
@@ -48,6 +52,16 @@ export default Vue.extend({
 <style lang="scss" scoped>
     #resume {
         height: 100%;
-        width: 100%;
+        width: 80%;
+
+        .section:first-of-type {
+            padding: 6vmin 0 3vmin 0;
+        }
+        .section {
+            padding: 3vmin 0;
+        }
+        .section:last-of-type {
+            padding: 3vmin 0 6vmin 0;
+        }
     }
 </style>

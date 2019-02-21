@@ -4,7 +4,11 @@ import router from './router';
 import store from './store';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faHamburger } from '@fortawesome/free-solid-svg-icons';
+import {
+  faDatabase,
+  faFileExcel,
+  faAngleDoubleRight,
+} from '@fortawesome/free-solid-svg-icons';
 import {
   faLinkedinIn,
   faTwitter,
@@ -12,6 +16,10 @@ import {
   faTwitch,
   faSlack,
   faAws,
+  faVuejs,
+  faAngular,
+  faJs,
+  faPython,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
@@ -20,7 +28,9 @@ import 'bootstrap/scss/bootstrap.scss';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
 library.add(
-  faHamburger,
+  faDatabase,
+  faFileExcel,
+  faAngleDoubleRight,
 );
 
 library.add(
@@ -30,6 +40,10 @@ library.add(
   faTwitch,
   faSlack,
   faAws,
+  faVuejs,
+  faAngular,
+  faJs,
+  faPython,
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);

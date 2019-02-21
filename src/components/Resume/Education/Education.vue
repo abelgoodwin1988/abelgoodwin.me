@@ -1,7 +1,7 @@
 <template>
     <div id="education">
         <template v-for="education in educations">
-            <EducationCard :education="education" v-bind:key="education.university+education.description"/>           
+            <EducationCard class="education-card" :education="education" v-bind:key="education.university+education.description"/>           
         </template>
     </div>
 </template>
@@ -22,5 +22,10 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+    #education {
 
+        .education-card {
+            padding: 1vmin 0;
+        }
+    }
 </style>

@@ -16,6 +16,7 @@ export interface Experience {
     endDate: moment.Moment | string;
     location: Location;
     accomplishments: Accomplishment[];
+    technologies?: Array<{name: string, faIcon?: string, faIconGroup?: string}>;
 }
 
 interface Location {
@@ -37,8 +38,8 @@ export interface Education {
 
 export interface Skill {
     name: string;
-    description: string;
     category: SkillCategory[];
+    svg?: string;
 }
 
 type SkillCategory = string;

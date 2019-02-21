@@ -1,7 +1,7 @@
 <template>
     <div id="experience">
         <template v-for="experience in experiences">
-            <ExperienceCard :experience="experience" v-bind:key="experience.company+experience.position"/>
+            <ExperienceCard class="experience-card" :experience="experience" v-bind:key="experience.company+experience.position"/>
         </template>
     </div>
 </template>
@@ -24,5 +24,8 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-
+    .experience-card {
+        padding: 1vmin 0;
+        ;
+    }
 </style>

@@ -37,7 +37,7 @@ export default Vue.extend({
     width: 100%;
     background: $background;
     #app-content {
-      @include flex(column, flex-start, flex-start);
+      @include flex(column, flex-start, center);
       flex: 1 0 auto;
       height: 100%;
       min-height: 100%;
