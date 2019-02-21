@@ -1,8 +1,10 @@
 <template>
     <div id="certificates">
-        <div id="certificates-label">
-            Certificates
+        <div class="section">
+            <div class="section-title">CERTIFICATES&nbsp;</div>
+            <div class="section-rule"></div>
         </div>
+
         <div class="certificate" v-for="certificate in certificates" v-bind:key="certificate.name">
             <div class="certificate-wrapper">
                 <a class="certificate-link" :href="certificate.url">
@@ -11,6 +13,7 @@
                 </a>
             </div>
         </div>
+        
     </div>
 </template>
 
@@ -29,22 +32,35 @@ export default Vue.extend({
     $card-fade: linear-gradient(170deg, rgba(96, 110, 123, .7), rgba(245, 245, 245, .5));
 
     #certificates {
-        @include flex(column, flex-start, flex-start);
-        border-radius: 1vmin;
 
-        #certificates-label{
-            font-size: 6vmin;
-            color: $font-color-primary;
+        .section {
+            @include flex(row, flex-start, center);
+
+            .section-title {
+                font-size: 2vmin;
+            }
+            .section-rule {
+                height: 1px;
+                width: 100%;
+                flex-grow: 1;
+                background: $banner-fade;
+            }
+
+            
         }
 
         .certificate {
+            @include flex(row, flex-start, center);
+            max-width: 60vmin;
+            flex-shrink: 1;
             background: $card-fade;
             padding: 2px;
+            margin: 3vmin 0 0 0;
             min-height: 8vmin;
-            min-width: 50vmin;
             
             .certificate-wrapper {
                 @include flex(column, flex-start, center);
+                width: 100%;
                 background: $color-secondary;
                 padding: 2px;
                 min-height: calc(8vmin - 2px);

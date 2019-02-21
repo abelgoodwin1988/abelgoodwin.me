@@ -1,8 +1,15 @@
 <template>
     <div id="education">
-        <template v-for="education in educations">
-            <EducationCard class="education-card" :education="education" v-bind:key="education.university+education.description"/>           
-        </template>
+        <div class="section">
+            <div class="section-title">EDUCATION&nbsp;</div>
+            <div class="section-rule"></div>
+        </div>
+        <div class="section justify-content-around">
+            <template v-for="education in educations">
+                <EducationCard class="education-card" :education="education" v-bind:key="education.university+education.description"/>           
+            </template>
+        </div>
+        
     </div>
 </template>
 
@@ -23,6 +30,19 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
     #education {
+        .section {
+            @include flex(row, flex-start, center);
+
+            .section-title {
+                font-size: 2vmin;
+            }
+            .section-rule {
+                height: 1px;
+                width: 100%;
+                flex-grow: 1;
+                background: $banner-fade;
+            }
+        }
 
         .education-card {
             padding: 1vmin 0;

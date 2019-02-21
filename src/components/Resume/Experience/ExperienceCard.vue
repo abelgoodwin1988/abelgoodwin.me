@@ -45,6 +45,7 @@ import { Prop } from 'vue/types/options';
 import { Experience } from '@/assets/resume/resume.model';
 
 import * as moment from 'moment';
+// tslint:disable-next-line
 const m = require('moment');
 
 export default Vue.extend({

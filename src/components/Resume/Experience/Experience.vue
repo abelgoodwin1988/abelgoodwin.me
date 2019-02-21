@@ -1,5 +1,9 @@
 <template>
     <div id="experience">
+        <div class="section">
+            <div class="section-title">EXPERIENCE&nbsp;</div>
+            <div class="section-rule"></div>
+        </div>
         <template v-for="experience in experiences">
             <ExperienceCard class="experience-card" :experience="experience" v-bind:key="experience.company+experience.position"/>
         </template>
@@ -24,8 +28,25 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-    .experience-card {
-        padding: 1vmin 0;
-        ;
+    #experience {
+
+        .section {
+            @include flex(row, flex-start, center);
+
+            .section-title {
+                font-size: 2vmin;
+            }
+            .section-rule {
+                height: 1px;
+                width: 100%;
+                flex-grow: 1;
+                background: $banner-fade;
+            }
+        }
+
+        .experience-card {
+            padding: 1vmin 0;
+        }
     }
+    
 </style>

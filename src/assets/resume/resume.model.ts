@@ -38,8 +38,8 @@ export interface Education {
 
 export interface Skill {
     name: string;
-    category: SkillCategory[];
-    svg?: string;
+    category: SkillCategory;
+    faIcon?: string;
 }
 
 type SkillCategory = string;
