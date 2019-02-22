@@ -49,12 +49,12 @@ export default Vue.extend({
                 skillsByGroup[group] = [];
                 for (const skill of this.skills) {
                     if (skill.category === group) {
-                        skillsByGroup[group].push({name: skill.name, svg: skill.svg});
+                        skillsByGroup[group].push({name: skill.name, faIcon: skill.faIcon});
                     }
                 }
             }
             return skillsByGroup;
-        }
+        },
     },
     methods: {
         inArray(value: any, array: any[]): boolean {

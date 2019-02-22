@@ -37,7 +37,7 @@ export default Vue.extend({
     } {
         return {
             m,
-        }
+        };
     },
     methods: {
         endDateHandler(endDate: moment.Moment | string): string {
@@ -46,7 +46,7 @@ export default Vue.extend({
             }
             return 'Current';
         },
-    }
+    },
 });
 </script>
 
