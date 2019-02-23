@@ -113,7 +113,7 @@ export default Vue.extend({
             }
 
             #details {
-                @include flex(column, flex-start, center);
+                @include flex(column, flex-start, flex-start);
                 padding: 2vmin 0 0 7vmin;
 
                 @media screen and (max-width:960px) {
@@ -139,12 +139,11 @@ export default Vue.extend({
                 }
 
                 .technologies {
-                    // @include flex(row, flex-start, center);
-                    align-self: flex-start;
 
                     .technology {
                         color: $font-color-primary;
                         display: inline-flex;
+                        vertical-align: top !important;
                         font-size: 3vmin;
                         padding: .5vmin;
                         user-select: none;
