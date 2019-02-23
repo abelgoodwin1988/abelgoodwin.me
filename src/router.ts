@@ -5,6 +5,7 @@ import Resume from './views/Resume.vue';
 import Portfolio from './views/Portfolio.vue';
 import Blog from './views/Blog.vue';
 import Contact from './views/Contact.vue';
+import NotFoundComponent from './shared/error/NotFoundComponent.vue';
 
 Vue.use(Router);
 
@@ -12,6 +13,7 @@ export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
+    { path: '*', component: NotFoundComponent },
     {
       path: '/',
       name: 'home',
