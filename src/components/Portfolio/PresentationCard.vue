@@ -86,7 +86,6 @@ export default Vue.extend({
                     background: $color-tertiary;
                     border: 1px solid $color-primary;
                     color: $font-color-secondary;
-                    margin: 1vmin 0 0 0 ;
                     padding: 1vmin;
                     max-width: 25%;
                 .text {

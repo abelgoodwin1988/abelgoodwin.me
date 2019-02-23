@@ -9,11 +9,11 @@
                 <PresentationCard :presentation="presentation" :imagePosition="imagePosition(index)"/>
             </div>
         </template>
-        <template v-for="project in portfolio.projects">
+        <!-- <template v-for="project in portfolio.projects">
             <div class="project" :key="project.title">
                 <ProjectCard :project="project"/>
             </div>
-        </template>
+        </template> -->
     </div>
 </template>
 
