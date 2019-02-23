@@ -1,6 +1,5 @@
 <template>
     <div class="experience" >
-        <div class="flex-row">
             <div id="meta">
                 <div class="position">{{experience.position}}</div>
                 <div class="company">{{experience.company}}</div>
@@ -35,7 +34,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </div>
 </template>
 
@@ -80,72 +78,84 @@ export default Vue.extend({
     #experience {
         @include flex(row, center, center);
 
-        #meta {
-            @include flex(column, flex-start, flex-start);
-            width: 35vmin;
-            flex-grow: 0 !important;
-            flex-shrink: 0 !important;
+        .experience {
+            @include flex(row, flex-start, flex-start);
 
-            .position {
-                font-size: 4vmin;
-                font-weight: bolder;
+            @media screen and(max-width:960px) {
+                @include flex(column, flex-start, flex-start);
             }
-            .company {
-                font-size: 3vmin;
-                font-style: italic;
-                font-weight: bold;
-            }
-            .time {
-                font-weight: 300;
-                font-size: 2vmin;
-            }
-            .months {
-                font-size: 3vmin;
-            }
-            .location {
-                font-size: 1.5vmin;
-            }
-        }
 
-        #details {
-            @include flex(column, flex-start, center);
-            padding: 2vmin 0 0 7vmin;
+            #meta {
+                @include flex(column, flex-start, flex-start);
+                width: 35vmin;
+                flex-grow: 0 !important;
+                flex-shrink: 0 !important;
 
-            .accomplishments {
-                
-                .accomplishment {
-                    @include flex(row, flex-start, center);
-
-                    .accomplishment-indent {
-                        align-self: start;
-                        height: 100%;
-                        font-size: 2vmin;
-                    }
-
-                    .text {
-                        font-size: 2vmin;
-                        padding: 0 0 1vmin 1vmin;
-                    }
+                .position {
+                    font-size: 4vmin;
+                    font-weight: bolder;
+                }
+                .company {
+                    font-size: 3vmin;
+                    font-style: italic;
+                    font-weight: bold;
+                }
+                .time {
+                    font-weight: 300;
+                    font-size: 2vmin;
+                }
+                .months {
+                    font-size: 3vmin;
+                }
+                .location {
+                    font-size: 1.5vmin;
                 }
             }
 
-            .technologies {
-                // @include flex(row, flex-start, center);
-                align-self: flex-start;
+            #details {
+                @include flex(column, flex-start, center);
+                padding: 2vmin 0 0 7vmin;
 
-                .technology {
-                    color: $font-color-primary;
-                    display: inline-flex;
-                    font-size: 3vmin;
-                    padding: .5vmin;
-                    user-select: none;
+                @media screen and (max-width:960px) {
+                    padding: 2vmin 0 0 0;
+                }
 
-                    .technology-text {
-                        font-size: 2vmin;
-                        background: $color-primary;
-                        color: $font-color-secondary;
-                        padding: 0 .5vmin;
-                        border-radius: .5vmin;
+                .accomplishments {
+                    
+                    .accomplishment {
+                        @include flex(row, flex-start, center);
+
+                        .accomplishment-indent {
+                            align-self: start;
+                            height: 100%;
+                            font-size: 2vmin;
+                        }
+
+                        .text {
+                            font-size: 2vmin;
+                            padding: 0 0 1vmin 1vmin;
+                        }
+                    }
+                }
+
+                .technologies {
+                    // @include flex(row, flex-start, center);
+                    align-self: flex-start;
+
+                    .technology {
+                        color: $font-color-primary;
+                        display: inline-flex;
+                        font-size: 3vmin;
+                        padding: .5vmin;
+                        user-select: none;
+
+                        .technology-text {
+                            font-size: 2vmin;
+                            background: $color-primary;
+                            color: $font-color-secondary;
+                            padding: 0 .5vmin;
+                            border-radius: .5vmin;
+                        }
                     }
                 }
             }
