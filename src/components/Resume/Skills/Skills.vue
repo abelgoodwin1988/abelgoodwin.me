@@ -115,6 +115,7 @@ export default Vue.extend({
                     border-radius: .5vmin;
                     margin: .5vmin;
                     padding: .5vmin;
+                    user-select: none;
 
                     .skill-name {
                         font-size: 2.75vmin;

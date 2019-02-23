@@ -134,6 +134,7 @@ export default Vue.extend({
                     color: $font-color-primary;
                     font-size: 3vmin;
                     padding: .5vmin;
+                    user-select: none;
 
                     .technology-text {
                         font-size: 2vmin;

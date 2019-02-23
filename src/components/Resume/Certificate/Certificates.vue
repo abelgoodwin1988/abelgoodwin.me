@@ -5,13 +5,11 @@
             <div class="section-rule"></div>
         </div>
 
-        <div class="certificate" v-for="certificate in certificates" v-bind:key="certificate.name">
-            <div class="certificate-wrapper">
-                <a class="certificate-link" :href="certificate.url">
-                    <font-awesome-icon v-if="certificate.hasOwnProperty('faIcon')" class="fa-icon" :icon="['fab', certificate.faIcon]" />
-                    <div class="name">{{certificate.name}}</div>
-                </a>
-            </div>
+        <div class="certificates" v-for="certificate in certificates" v-bind:key="certificate.name">
+            <a class="certificate" :href="certificate.url">
+                <font-awesome-icon v-if="certificate.hasOwnProperty('faIcon')" class="fa-icon" :icon="['fab', certificate.faIcon]" />
+                <div class="name">{{certificate.name}}</div>
+            </a>
         </div>
         
     </div>
@@ -49,41 +47,38 @@ export default Vue.extend({
             
         }
 
-        .certificate {
+        .certificates {
             @include flex(row, flex-start, center);
-            max-width: 60vmin;
-            flex-shrink: 1;
-            background: $card-fade;
-            padding: 2px;
             margin: 3vmin 0 0 0;
-            min-height: 8vmin;
-            
-            .certificate-wrapper {
-                @include flex(column, flex-start, center);
-                width: 100%;
-                background: $color-secondary;
-                padding: 2px;
-                min-height: calc(8vmin - 2px);
 
-                .certificate-link {
-                    @include flex(row, center, center);
-                    flex: 1 1 auto;
-                    color: $font-color-tertiary;
-                    text-decoration: none;
-                    
-                    .fa-icon {
-                        font-size: 5vmin;
-                        padding: 1vmin;
-                    }
-                    .name {
-                        font-size: 3vmin;
-                    }
-                }
-                .certificate-link:hover {
-                    cursor: pointer;
-                    color: $font-color-primary;
+            .certificate {
+                @include flex(row, center, center);
+                display: inline-flex;
+                min-height: 8vmin;
+                color: $font-color-secondary;
+                background: $color-tertiary;
+                text-decoration: none;
+                border-radius: .5vmin;
+                margin: .5vmin;
+                padding: 2vmin;
+                user-select: none;
+
+                .name {
+                    font-size: 4vmin;
+                    padding-left: 1vmin;
                 }
             }
+
+            .certificate:hover {
+                color: $font-color-primary;
+                background: $color-secondary;
+                box-shadow: inset 0px 0px 0px 1px $color-primary;
+                cursor: pointer;
+            }
+                
+        }
+        .certificate:hover {
+            background: $color-tertiary;
         }
     }
 </style>
