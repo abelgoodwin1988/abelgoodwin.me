@@ -25,7 +25,7 @@ export default new Router({
       component: Resume,
     },
     {
-      path: '/portflio',
+      path: '/portfolio',
       name: 'portfolio',
       component: Portfolio,
     },
