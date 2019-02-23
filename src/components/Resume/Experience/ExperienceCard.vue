@@ -1,7 +1,7 @@
 <template>
     <div class="experience" >
         <div class="flex-row">
-            <div id="meta" class="flex-column">
+            <div id="meta">
                 <div class="position">{{experience.position}}</div>
                 <div class="company">{{experience.company}}</div>
                 <div class="time">
@@ -19,7 +19,7 @@
                 </div>
             </div>
         
-            <div id="details" class="flex-column">
+            <div id="details">
                 <div class="accomplishments">
                     <div class="accomplishment" v-for="accomplishment in experience.accomplishments" v-bind:key="accomplishment">
                         <div class="accomplishment-indent">
@@ -81,6 +81,7 @@ export default Vue.extend({
         @include flex(row, center, center);
 
         #meta {
+            @include flex(column, flex-start, flex-start);
             width: 35vmin;
             flex-grow: 0 !important;
             flex-shrink: 0 !important;
@@ -107,7 +108,8 @@ export default Vue.extend({
         }
 
         #details {
-            padding: 2vmin 0 0 10vmin;
+            @include flex(column, flex-start, center);
+            padding: 2vmin 0 0 7vmin;
 
             .accomplishments {
                 
@@ -128,10 +130,12 @@ export default Vue.extend({
             }
 
             .technologies {
-                @include flex(row, flex-start, center);
+                // @include flex(row, flex-start, center);
+                align-self: flex-start;
 
                 .technology {
                     color: $font-color-primary;
+                    display: inline-flex;
                     font-size: 3vmin;
                     padding: .5vmin;
                     user-select: none;
