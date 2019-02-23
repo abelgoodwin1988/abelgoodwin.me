@@ -1,12 +1,16 @@
 <template>
     <div id="portfolio">
-        <template v-for="presentation in presentations.presentations">
+        <div class="section mt-5">
+            <div class="section-title">PRESENTATIONS&nbsp;</div>
+            <div class="section-rule"></div>
+        </div>
+        <template v-for="(presentation, index) in presentations.presentations">
             <div class="presentation" :key="presentation.title">
-                <PresentationCard :presentation="presentation"/>
+                <PresentationCard :presentation="presentation" :imagePosition="imagePosition(index)"/>
             </div>
         </template>
         <template v-for="project in portfolio.projects">
-            <div class="portfolio" :key="project.title">
+            <div class="project" :key="project.title">
                 <ProjectCard :project="project"/>
             </div>
         </template>
@@ -36,14 +40,37 @@ export default Vue.extend({
         PresentationCard,
         ProjectCard,
     },
+    methods: {
+        imagePosition(ind: number): boolean {
+            return ind % 2 === 0;
+        },
+    },
 });
 </script>
 
 <style lang="scss" scoped>
     #portfolio {
+        width: 100%;
+        height: auto;
 
-        .portfolio {
+        .section {
+            @include flex(row, flex-start, center);
 
+            .section-title {
+                font-size: 2vmin;
+            }
+            .section-rule {
+                height: 1px;
+                width: 100%;
+                flex-grow: 1;
+                background: $banner-fade;
+            }
+        }
+
+        .presentation {
+            @include flex(row, center, center);
+            width: 100%;
+            min-height: 12vmin;
         }
     }
 </style>

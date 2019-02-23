@@ -5,8 +5,9 @@ export interface Presentations {
 export interface Presentation {
     title: string;
     subtitle: string;
+    description: string;
     source: URL;
-    technologoes: Technology[];
+    technologies: Technology[];
     faIcon?: string;
     faIconGroup?: string;
 }
