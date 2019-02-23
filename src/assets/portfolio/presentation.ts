@@ -17,9 +17,9 @@ export const Presentations: prType.Presentations = {
             ],
         },
         {
-            title: 'Vue + TS',
+            title: 'Vue + TypeScript',
             subtitle: 'Introduction to TS conception through Vue',
-            description: 'Presented some basic Vue with TS patterns and the strength of TS with IDE and Vue.',
+            description: 'Presented some basic Vue with TS patterns and the strength of TS with IDE and Vue. Discussion based on pros/cons of strongly typed language.',
             source: 'https://gist.github.com/abelgoodwin1988/b1f7cadaf0c90f24e02873201953ead2',
             faIcon: 'microsoft',
             faIconGroup: 'fab',
