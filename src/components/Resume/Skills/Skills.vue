@@ -4,8 +4,8 @@
             <div class="section-title">SKILLS&nbsp;</div>
             <div class="section-rule"></div>
         </div>
-        <div class="section justify-content-between align-items-start">
-            <div class="skillGroups" v-for="(skills, group) in skillsByGroup" :key="group">
+        <div class="skills-groups section">
+            <div class="skill-groups" v-for="(skills, group) in skillsByGroup" :key="group">
                 <div class="group">
                     <div class="group-title">{{group}}</div>
                     <div class="group-rule"></div>
@@ -86,51 +86,63 @@ export default Vue.extend({
             }
         }
 
-        .skillGroups{
-            @include flex(column, center, flex-start);
-            width: 23%;
-
-            .group {
-                @include flex(row, flex-start, center);
-                width: 100%;
-                .group-title {
-                    font-size: 2vmin;
-                    flex-shrink: 0;
-                }
-                .group-rule {
-                    height: 1px;
-                    width: 100%;
-                    flex-grow: 1;
-                    background: $banner-fade;
-                }
+        .skills-groups {
+            @include flex(row, space-between, flex-start);
+        
+            @media screen and (max-width:960px) {
+                @include flex(column, space-between, flex-start);
             }
 
-            .skills {
+            .skill-groups{
+                @include flex(column, center, flex-start);
+                width: 23%;
+                
+                @media screen and (max-width:960px) {
+                    width: 100%;
+                }
 
-                .skill {
-                    display: inline-block;
-                    color: $font-color-secondary;
-                    background: $color-tertiary;
-                    text-decoration: none;
-                    border-radius: .5vmin;
-                    margin: .5vmin;
-                    padding: .5vmin;
-                    user-select: none;
-
-                    .skill-name {
-                        font-size: 2.75vmin;
+                .group {
+                    @include flex(row, flex-start, center);
+                    width: 100%;
+                    .group-title {
+                        font-size: 2vmin;
+                        flex-shrink: 0;
+                    }
+                    .group-rule {
+                        height: 1px;
+                        width: 100%;
+                        flex-grow: 1;
+                        background: $banner-fade;
                     }
                 }
 
-                .skill:hover {
-                    color: $font-color-primary;
-                    background: $color-secondary;
-                    box-shadow: inset 0px 0px 0px 1px $color-primary;
-                    cursor: pointer;
+                .skills {
+                    max-width: 100%;
+                    .skill {
+                        display: inline-flex;
+                        flex-shrink: 1;
+                        flex: 0 1 auto;
+                        color: $font-color-secondary;
+                        background: $color-tertiary;
+                        text-decoration: none;
+                        border-radius: .5vmin;
+                        margin: .5vmin;
+                        padding: .5vmin;
+                        user-select: none;
+
+                        .skill-name {
+                            font-size: 2.75vmin;
+                        }
+                    }
+
+                    .skill:hover {
+                        color: $font-color-primary;
+                        background: $color-secondary;
+                        box-shadow: inset 0px 0px 0px 1px $color-primary;
+                        cursor: pointer;
+                    }
                 }
             }
         }
-
-        
     }
 </style>

@@ -4,7 +4,7 @@
             <div class="section-title">EDUCATION&nbsp;</div>
             <div class="section-rule"></div>
         </div>
-        <div class="section justify-content-around">
+        <div class="educations section">
             <template v-for="education in educations">
                 <EducationCard class="education-card" :education="education" v-bind:key="education.university+education.description"/>           
             </template>
@@ -44,8 +44,16 @@ export default Vue.extend({
             }
         }
 
-        .education-card {
-            padding: 1vmin 0;
+        .educations {
+            @include flex(row, space-around, center);
+
+            @media screen and (max-width:960px) {
+                @include flex(column, space-around, center);
+            }
+            .education-card {
+                padding: 1vmin 0;
+            }
+
         }
     }
 </style>

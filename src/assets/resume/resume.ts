@@ -146,7 +146,7 @@ Interested in further developing technical skills in Data Engineering Domains in
         { name: 'PIG', category: 'Data Engineering' },
         { name: 'Data Modeling', category: 'Data Engineering' },
         { name: 'Datawarehousing', category: 'Data Engineering' },
-        { name: 'Relation Database Design', category: 'Data Engineering' },
+        { name: 'Relational Database Design', category: 'Data Engineering' },
         { name: 'Database Administration', category: 'Data Engineering' },
         { name: 'TypeScript', category: 'Software Engineering' },
         { name: 'JavaScript', category: 'Software Engineering' },
