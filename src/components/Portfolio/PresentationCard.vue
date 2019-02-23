@@ -9,9 +9,9 @@
                     <font-awesome-icon v-if="technology.hasOwnProperty('faIcon')" :icon="[technology.faIconGroup, technology.faIcon]" :title="technology.name"/>
                     <div class="technology-text" v-else>{{technology.name}}</div>
                 </div>
-                <a :href="presentation.source" class="source">
+                <a :href="presentation.source" class="source" :class="{ 'margin-left': !imagePosition}">
                     <div class="text">
-                        Source
+                        Source Here
                     </div>
                 </a>
             </div>
@@ -43,7 +43,7 @@ export default Vue.extend({
     #presentation-card {
         @include flex(row, center, center);
         width: 80%;
-        min-height: 18vmin;
+        min-height: 24vmin;
         margin: 2vmin 0;
 
         #details {
@@ -55,25 +55,26 @@ export default Vue.extend({
                 font-size: 3vmin;
             }
             .subtitle {
-                font-size: 2vmin;
+                font-size: 2.25vmin;
             }
             .description {
-                font-size: 1.25vmin;
+                font-size: 1.75vmin;
             }
             .presentation-card-footer {
                 @include flex(row, flex-end, center);
                 width: 100%;
+                margin: 3vmin 0 0 0;
 
                 .technology {
                     color: $font-color-primary;
                     display: inline-flex;
                     vertical-align: top !important;
-                    font-size: 2vmin;
+                    font-size: 3vmin;
                     padding: .5vmin;
                     user-select: none;
 
                     .technology-text {
-                        font-size: 1.25vmin;
+                        font-size: 1.75vmin;
                         background: $color-primary;
                         color: $font-color-secondary;
                         padding: 0 .5vmin;
@@ -86,7 +87,8 @@ export default Vue.extend({
                     background: $color-tertiary;
                     border: 1px solid $color-primary;
                     color: $font-color-secondary;
-                    padding: 1vmin;
+                    padding: .7vmin 2vmin;
+                    margin-right: 3vmin;
                     max-width: 25%;
                     text-decoration: none;
                     .text {
@@ -106,8 +108,8 @@ export default Vue.extend({
             @include flex(column, center, center);
 
             .fa-icon {
-                padding: 2vmin 0 2vmin 2vmin;
-                font-size: 12vmin;
+                padding: 2vmin 2vmin 2vmin 0;
+                font-size: 16vmin;
             }
         }
     }
@@ -121,6 +123,11 @@ export default Vue.extend({
         justify-content: flex-end !important;
     }
     .padding-left {
-        padding: 2vmin 2vmin 2vmin 0 !important;
+        padding-left: 2vmin !important;
+        padding-right: 0;
+    }
+    .margin-left {
+        margin-left: 3vmin !important;
+        margin-right: 0 !important;
     }
 </style>
