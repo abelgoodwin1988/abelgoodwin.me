@@ -88,18 +88,18 @@ export default Vue.extend({
                     color: $font-color-secondary;
                     padding: 1vmin;
                     max-width: 25%;
-                .text {
-                    font-size: 2vmin;
+                    text-decoration: none;
+                    .text {
+                        font-size: 2vmin;
+                    }
+                }
+                .source:hover {
+                    cursor: pointer;
+                    background: $color-secondary;
+                    border: 1px solid $color-tertiary;
+                    color: $font-color-primary;
                 }
             }
-            .source:hover {
-                cursor: pointer;
-                background: $color-secondary;
-                border: 1px solid $color-tertiary;
-                color: $font-color-primary;
-            }
-            }
-            
         }
 
         #hero {
