@@ -52,6 +52,7 @@ Interested in further developing technical skills in Data Engineering Domains in
                 { name: 'Lambda' },
                 { name: 'Python', faIcon: 'python', faIconGroup: 'fab' },
                 { name: 'Postgres' },
+                { name: 'SQL Server' },
                 { name: 'RDS' },
                 { name: 'SQL' },
             ],

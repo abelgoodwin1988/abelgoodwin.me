@@ -54,6 +54,10 @@ export default Vue.extend({
         height: 100%;
         width: 80%;
 
+        #summary {
+            text-indent: 5vmin;
+        }
+
         .section:first-of-type {
             padding: 6vmin 0 3vmin 0;
         }
