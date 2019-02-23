@@ -9,6 +9,7 @@ import {
   faFileExcel,
   faAngleDoubleRight,
   faAt,
+  faCodeBranch,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faLinkedinIn,
@@ -21,6 +22,9 @@ import {
   faAngular,
   faJs,
   faPython,
+  faSass,
+  faHtml5,
+  faNpm,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
@@ -33,6 +37,7 @@ library.add(
   faFileExcel,
   faAngleDoubleRight,
   faAt,
+  faCodeBranch,
 );
 
 library.add(
@@ -46,6 +51,9 @@ library.add(
   faAngular,
   faJs,
   faPython,
+  faSass,
+  faHtml5,
+  faNpm,
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
