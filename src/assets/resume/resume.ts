@@ -75,7 +75,6 @@ Interested in further developing technical skills in Data Engineering Domains in
                 'Developed ETL solutions to reduce Sales and Use Tax Compliance Center manual processing of tax documents saving 2000 hours per year, down to a fourth of time previously spent. Facilitated high-level discussions to find additional hour-saving processes.',
                 'Developed Gross Receipts Modeling Estimates tool used to aggregate, analyze and visualize fifteen years of Indirect Tax data for defense in potential litigation. Analysis saved client time aggregating data allowing for substantially more time to prepare for potential litigation.',
                 'Created visualizations in Power BI after data scraping in Vertex and targeted client websites for relevant geocoding and locality tax rates information. Used to convince targeted client of our understanding of their indirect tax footprint and need for automation. ',
-                'Technologies: SQL Server, VBA, Microsoft Excel, Microsoft Access, Power BI, Python',
             ],
             technologies: [
                 { name: 'SQL Server' },
