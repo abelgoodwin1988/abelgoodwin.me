@@ -18,8 +18,9 @@ Interested in further developing technical skills in Data Engineering Domains in
                 country: 'USA',
             },
             accomplishments: [
-                'Built Flight-Booking application for large company retreat and events planning agency.',
-                'Built IoT meter electricity usage dashboard for Government Agency.',
+                'Created dashboards for IoT Energy Data to be used for energy awareness. Designed and implements data models to be received by Vue front-end application via websocket for storage in Vuex and consumption for dashboard components. Created custom SVG/D3 graphs. Designed all aspects of Vue front-end application.',
+                'Created Airline booking web application in Angular and Typescript which receives guests from Back End application, searches flights per guest\'s program specifications and user input.User sorts, filters flights, selects and books them.',
+                'Created NodeJS 3rd party application integrations ',
             ],
             technologies: [
                 { name: 'Vue', faIcon: 'vuejs', faIconGroup: 'fab' },
