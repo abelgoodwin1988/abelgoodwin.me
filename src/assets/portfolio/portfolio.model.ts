@@ -11,6 +11,8 @@ export interface Project {
     source: URL;
     website: URL;
     technologies: Technology[];
+    faIcon?: string;
+    faIconGroup?: string;
 }
 
 export interface Technology {

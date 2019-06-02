@@ -1,6 +1,15 @@
 <template>
     <div id="portfolio">
         <div class="section mt-5">
+            <div class="section-title">PROJECTS&nbsp;</div>
+            <div class="section-rule"></div>
+        </div>
+        <template v-for="(project, index) in portfolio.projects">
+            <div class="presentation" :key="project.title">
+                <ProjectCard :project="project" :imagePosition="imagePosition(index)"/>
+            </div>
+        </template>
+        <div class="section mt-5">
             <div class="section-title">PRESENTATIONS&nbsp;</div>
             <div class="section-rule"></div>
         </div>
@@ -9,11 +18,6 @@
                 <PresentationCard :presentation="presentation" :imagePosition="imagePosition(index)"/>
             </div>
         </template>
-        <!-- <template v-for="project in portfolio.projects">
-            <div class="project" :key="project.title">
-                <ProjectCard :project="project"/>
-            </div>
-        </template> -->
     </div>
 </template>
 
